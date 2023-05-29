@@ -7,6 +7,13 @@ terraform {
       version = ">= 3.43.0"
     }
   }
+  cloud {
+    organization = "ParminderSaini"
+
+    workspaces {
+      name = "Hands-On_With_Terraform_On_Azure2"
+    }
+  }
 }
 resource "azurerm_storage_account" "securestorage" {
   resource_group_name           = var.resource_group_name
